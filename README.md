@@ -1,1 +1,1 @@
-https://github.com/Linmax234/first-project
+git@github.com:Linmax234/ono-tebe-nado-fd.git
