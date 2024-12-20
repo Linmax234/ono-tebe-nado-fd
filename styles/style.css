@@ -1,1 +1,320 @@
-/* место для вашего кода */
+/* Шапка    */
+header {
+    width: 1100px;
+    height: 293px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*  Меню шапки */
+.header_links-list{
+    width: 391px;
+    display: flex;
+    list-style: circle;
+    gap: 33px;
+    font-size: 18px;
+    color: #000;
+    text-underline-offset: 3px;
+    margin-left: 45px;
+}
+.header_links-item_no-bullit {
+    list-style: none;
+}
+.header_menu-link {
+    color: #000;
+}
+
+/* Адрес в шапке */
+address {
+    max-width: 240px;
+    justify-self: end;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+    margin-right: 54px;
+    text-underline-offset: 3px;
+}
+
+/* Цвет шрифта ссылки для шапки и подвала */
+.address-link, .footer_menu-link {
+    color:#000;
+}
+
+/* Логотип */
+.header_logo {
+    margin-top: 3px;
+    margin-right: 146px;
+}
+
+/* Овер */
+.over {
+    width: 1100px;
+    height: 757px;
+    position: relative;
+    display: flex;
+    background-image: url(../images/lotus-flower.jpg);
+}
+
+/* Затемнение фона*/
+.overlay {
+    width: 1100px;
+    height: 757px;
+    position: absolute;
+    background:rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+/* Надпись ОНО ТЕБЕ НАДО*/
+.over_title {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 100px;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* ОНО */
+.left_text {
+    position: relative;
+    top: 165px;
+    left: 50px;
+}
+
+/* ТЕБЕ */
+.center_text {
+    position: relative;
+    top: 300px;
+    left: 65px;  
+}
+
+/* НАДО */
+.right_text {
+    position: relative;
+    top: 435px;
+    right: 20px; 
+}
+
+/* Надпись Аукцион вещей... */
+.description {
+    display: flex;
+    position: relative;
+    top: 540px;
+    align-items: center;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    text-transform: uppercase;
+    word-spacing: 18.5px;
+    justify-content: space-around;
+}
+
+/* Кнопка */
+.button {
+    width: 256px;
+    height: 51px;
+    font-size: 22px;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #fff;
+}
+.button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Отступ ЛОТЫ */
+.cover {
+    padding-top: 180px;
+}
+
+.cover_head {
+    font-size: 40px;
+    margin: 0 0 27px 64px;
+}
+
+/* Карточки ЛОТЫ */
+.cards-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cover_card{
+    display: flex;
+    flex-direction: column;
+    width: 334px;
+    height: 596px;
+}
+
+/* Фон первой карточки */
+.card_film{
+    background-image: url(../images/photo.jpg);
+    background-size: cover;
+    
+}
+
+/* Фон второй карточки */
+.card_book{
+    background-image: url(../images/photo\ \(1\).jpg);
+    background-size: cover;
+   
+}
+
+/* Фон третьей карточки */
+.card_picture{
+    background-image: url(../images/photo\ \(2\).jpg);
+    background-size: cover;
+}
+
+.link_card {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Затемнение фона */
+.over_cover {
+    width: 334px;
+    height: 596px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Заголовки карточек */
+.cover_title {
+    position: relative;
+    font-size: 22px;
+    text-transform: uppercase;
+    left: 40px;
+    top: 48px;
+    text-decoration: underline;
+    width: 256px;
+    text-decoration-thickness: 1px;
+    line-height: 26px;
+    text-underline-offset: 3px;
+}
+
+/* Тест для первой карточки */
+.cover_text_film {
+    font-size: 20px;
+    margin-top: 328px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Тест для второй карточки */
+.cover_text_book {
+    font-size: 20px;
+    margin-top: 85px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Тест для третьей карточки */
+.cover_text_picture {
+    font-size: 20px;
+    margin-top: 185px;
+    padding-left: 40px;
+    padding-right: 45px;
+}
+
+
+.over_link  {
+    margin-top: 28px;
+    margin-left: 63px;
+    padding-bottom: 120px;
+}
+
+.over_link a {
+    font-size: 20px;
+    color:#000;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+/* Грид сетка About */
+.container { 
+    width: 1052px;
+    margin: 0 auto; 
+    display: grid;
+    position: relative;
+    align-items: center; 
+    gap:0 25px;
+    margin-bottom: 150px;
+    grid-template-columns: 334px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo text1 "
+      ". text2"
+  }
+  
+.logo {  
+    display: flex;
+    justify-content: center; 
+}
+  
+.text1 { grid-area: text1;}
+
+.auction-title {
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+  
+.text2 { 
+    grid-area: text2;
+    position: relative;
+    top: -34px;
+}
+
+.about_text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    word-spacing: 0.5px;  
+}
+/* Отступ между параграфами */
+.two {
+    padding-top: 24px;
+}
+
+/* Подвал footer */
+footer{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-bottom: 82px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Адрес */
+.addres_footer {
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px;
+    margin-right: 54px;
+    text-underline-offset: 3px;
+    word-spacing: 0.5px;
+}
+
+/* Меню */
+.footer_links-list {
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+    margin-right: 55px;
+    text-underline-offset: 3px;
+}
+
+/* Ссылки на соц сети */
+.social {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
