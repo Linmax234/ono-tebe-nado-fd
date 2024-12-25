@@ -1,7 +1,8 @@
 /* Шапка    */
 header {
     width: 1100px;
-    height: 293px;
+    padding-top: 92px;
+    padding-bottom: 96px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +51,7 @@ address {
 /* Овер */
 .over {
     width: 1100px;
-    height: 757px;
+    min-width: 757px;
     position: relative;
     display: flex;
     background-image: url(../images/cover.jpg);
@@ -64,49 +65,48 @@ address {
     background:rgba(0, 0, 0, 0.6);
     color: #fff;
     inset: 0;
-    
+    z-index: 1;
 }
 
 /* Надпись ОНО ТЕБЕ НАДО*/
 .over_title {
+    height: 757px;
     display: flex;
     position: relative;
-    justify-content: center;
+    line-height: 1.15;
     font-weight: 700;
     font-style: normal;
     font-size: 100px;
     letter-spacing: 30px;
     text-transform: uppercase;
-    top:0;
     color: #fff;
+    row-gap: 20px;
+    flex-direction: column;
+    z-index: 2;
 }
 
 
 /* ОНО */
-.left_text, title {
+.left_text {
     margin-top: 165px;
     margin-left: 50px;
 }
 
 /* ТЕБЕ */
-.center_text, title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 38px;
-    margin-left: 15px;
+.center_text {
+margin-left: 380.5px;
 }
 
 /* НАДО */
-.right_text, title {
-    display: flex;
-    position: relative; 
-    padding-top: 435px;
-    right: 85px;
+.right_text {
+   margin-left: 663px;
+
 }
 
 
 /* Надпись Аукцион вещей... */
 .description {
+    z-index: 2;
     display: flex;
     position: absolute;
     align-items: center;
@@ -129,12 +129,14 @@ address {
     background: transparent;
     border: 1px solid #fff;
     margin-left: 108px;
+    font-family: Raleway, sans-serif;
 }
 
 
 /* Отступ ЛОТЫ */
 .cover {
     padding-top: 180px;
+    margin-left: 35px;
 }
 
 .cover_head {
@@ -144,64 +146,51 @@ address {
 
 /* Карточки ЛОТЫ */
 .cards-list {
+    position: relative;
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    justify-content: center;
+    gap: 24px;
     flex-wrap: wrap;
     list-style-type: none;
     color: #fff;
 }
 
-.cover_card{
-
-}
-
 .link_card {
     color: #fff;
     text-decoration-line: none;
-
 }
+
 .over_cover {
+    position: relative;
     width: 334px;
     min-height: 596px;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.cover_card {
+    background-size: cover;
+    background-position: center;
+}
 /* Фон первой карточки */
 .card_film{
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 /* Фон второй карточки */
 .card_book{
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-position: center;
 
 }
 
 /* Фон третьей карточки */
 .card_picture{
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-position: center;
 }
-
-
-
-
-
 
 /* Заголовки карточек */
 .cover_title {
+    z-index: 2;
     font-size: 22px;
     text-transform: uppercase;
     padding-left: 40px;
@@ -212,38 +201,36 @@ address {
 
 /* Тест для карточки */
 .cover_text {
+    z-index: 2;
     font-size: 20px;
     padding-bottom: 48px;
     padding-left: 40px;
     padding-right: 40px;
 }
 
-
-
-
 .over_link  {
-    margin-top: 28px;
-    margin-left: 63px;
+    position: relative;
+    display: block;
+    margin-top: 30px;
+    margin-left: 40px;
     padding-bottom: 120px;
-}
-
-.over_link a {
     font-size: 20px;
     color:#000;
     text-decoration-thickness: 1px;
     text-underline-offset: 5px;
 }
 
+
 /* Грид сетка About */
 .container { 
+    margin: 0  auto;
     width: 1052px;
-    margin: 0 auto; 
     display: grid;
     position: relative;
-    align-items: center; 
-    gap:0 25px;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 150px;
-    grid-template-columns: 334px 1fr;
+    grid-template-columns:  1fr 693px;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "logo con_text "
@@ -251,30 +238,48 @@ address {
   }
   
 .logo {  
+    margin: 0  auto;
+    position: relative;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
 }
-  
-.con_text { grid-area: con_text;}
+.logo_white{
+    width: 148px;
+    height: 114px;
+}
+.con_text {grid-area: con_text;
+}
 
-.auction-title {
+.auction_title {
+    position: relative;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
+    left: 10px;
 }
   
 .text { 
+   
+
     grid-area: text;
-    top: -34px;
+    position: relative;
+    top: -30px; /* не понимаю в чем проблема, получается выровнить только через отрицательный*/
+    left: 10px;
 }
 
 .about_text {
+    position: relative;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
     word-spacing: 0.5px;  
 }
-/* Отступ между параграфами */
+/* Отступ между параграфами */ 
 .indent {
     padding-top: 24px;
 }
@@ -314,3 +319,9 @@ footer{
     list-style: none;
     gap: 48px;
 }
+
+/* Спасибо за совет ))
+*{
+    border: 1px solid red;
+  }
+*/
