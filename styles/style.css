@@ -1,4 +1,8 @@
 /* Шапка    */
+body {
+    background-color: rgb(147, 148, 149);
+    border: 1px solid red;
+}
 header {
     width: 1100px;
     padding-top: 92px;
@@ -57,6 +61,7 @@ address {
     background-image: url(../images/cover.jpg);
     background-size: cover;
     background-position: center;
+    flex-wrap: wrap;
 }
 
 /* Затемнение фона*/
@@ -70,7 +75,6 @@ address {
 
 /* Надпись ОНО ТЕБЕ НАДО*/
 .over_title {
-    height: 757px;
     display: flex;
     position: relative;
     line-height: 1.15;
@@ -108,16 +112,15 @@ margin-left: 380.5px;
 .description {
     z-index: 2;
     display: flex;
-    position: absolute;
-    align-items: center;
     font-style: normal;
     font-size: 22px;
     text-transform: uppercase;
     word-spacing: 18.5px;
-    justify-content: space-around;
+    align-items: center;
     color: #fff;
-    padding-top: 656px;
-    margin-left: 50px;
+    padding-top: 106px;
+    padding-bottom: 50px;
+    padding-left: 50px;
 }
 
 /* Кнопка */
@@ -136,12 +139,12 @@ margin-left: 380.5px;
 /* Отступ ЛОТЫ */
 .cover {
     padding-top: 180px;
-    margin-left: 35px;
+    margin-left: 24px;
 }
 
 .cover_head {
     font-size: 40px;
-    margin: 0 0 27px 64px;
+    margin: 0 0 27px 40px;
 }
 
 /* Карточки ЛОТЫ */
@@ -197,6 +200,7 @@ margin-left: 380.5px;
     padding-top: 48px;
     padding-right: 40px;
     text-decoration: underline;
+    line-height: 27px;
 }
 
 /* Тест для карточки */
@@ -206,6 +210,7 @@ margin-left: 380.5px;
     padding-bottom: 48px;
     padding-left: 40px;
     padding-right: 40px;
+    line-height: 24px;
 }
 
 .over_link  {
@@ -213,7 +218,7 @@ margin-left: 380.5px;
     display: block;
     margin-top: 30px;
     margin-left: 40px;
-    padding-bottom: 120px;
+    padding-bottom: 155px;
     font-size: 20px;
     color:#000;
     text-decoration-thickness: 1px;
@@ -223,23 +228,21 @@ margin-left: 380.5px;
 
 /* Грид сетка About */
 .container { 
-    margin: 0  auto;
+    margin: auto;
     width: 1052px;
     display: grid;
+    gap: 8px 0;
     position: relative;
     align-items: center;
     justify-content: center;
-    margin-bottom: 150px;
-    grid-template-columns:  1fr 693px;
-    grid-template-rows: 1fr 1fr;
+    margin-bottom: 181px;
+    grid-template-columns: 358px 1fr;
     grid-template-areas:
       "logo con_text "
       ". text"
   }
   
 .logo {  
-    margin: 0  auto;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,37 +250,33 @@ margin-left: 380.5px;
     height: 240px;
     background-color: #000;
     border-radius: 50%;
+    margin-left: 48px;
 }
 .logo_white{
     width: 148px;
     height: 114px;
+
 }
 .con_text {grid-area: con_text;
 }
 
 .auction_title {
-    position: relative;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
-    left: 10px;
+    margin-top: 10px;
 }
   
 .text { 
-   
-
     grid-area: text;
-    position: relative;
-    top: -30px; /* не понимаю в чем проблема, получается выровнить только через отрицательный*/
-    left: 10px;
+
 }
 
 .about_text {
-    position: relative;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    word-spacing: 0.5px;  
+    word-spacing: 0.4px;
 }
 /* Отступ между параграфами */ 
 .indent {
@@ -319,9 +318,8 @@ footer{
     list-style: none;
     gap: 48px;
 }
-
-/* Спасибо за совет ))
+/*
 *{
     border: 1px solid red;
   }
-*/
+    */
