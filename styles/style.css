@@ -1,8 +1,5 @@
 /* Шапка    */
-body {
-    background-color: rgb(147, 148, 149);
-    border: 1px solid red;
-}
+
 header {
     width: 1100px;
     padding-top: 92px;
